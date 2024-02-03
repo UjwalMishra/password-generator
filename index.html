@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="main-heading">Password Generator</h1>
+            <div class="display-container">
+                <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+                <button class="copyBtn" data-copy>
+                    <span class="cpymsg" data-copyMSG></span>
+                    <img src="./copy.png" height="20" width="20" alt="" class="imgcopy">
+                </button>
+
+            </div>
+            <div class="input-container">
+                <!-- Password-lengthSection  -->
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p data-lengthNumber>0</p>
+                </div>
+                <!-- Password-slider  -->
+                <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+                <!-- check-box  -->
+                <div>
+                    <!-- 1st-checkbox -->
+                    <div class="check">
+                        <input type="checkbox" id="uppercase">
+                        <label for="uppercase">Includes Uppercase letters</label>
+                    </div>
+                    <!-- 2nd-checkbox -->
+                    <div class="check">
+                        <input type="checkbox" id="lowercase">
+                        <label for="lowercase">Includes Lowercase letters</label>
+                    </div>
+                    <!-- 3rd-checkbox -->
+                    <div class="check">
+                        <input type="checkbox" id="numbers">
+                        <label for="numbers">Includes Numbers</label>
+                    </div class="check">
+                    <!-- 4th-checkbox -->
+                    <div class="check">
+                        <input type="checkbox" id="symbols">
+                        <label for="symbols">Includes Symbols</label>
+                    </div>
+                </div>
+                <!-- Strength-section -->
+                <div class="strength-section">
+                    <p>Strength</p>
+                    <div data-indicator id="strength-indicator"></div>
+                </div>
+                <!-- Generator-button  -->
+                <div class="generatebtn">
+                    <button class="generateButton">Generate Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
